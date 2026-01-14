@@ -2,21 +2,47 @@
 
 
 
-A lightweight Python CLI tool that analyzes a CSV file and prints a readable summary report.
+A lightweight Python CLI tool that profiles a CSV file and prints a readable report.
 
 
 
-It reports:
+It’s designed for quick “data sanity checks” before you do analysis, dashboards, or ML.
 
-\- rows and columns
 
-\- missing values per column
 
-\- inferred column type (numeric / text / mixed)
+\## What it reports
 
-\- numeric stats (min / max / mean / standard deviation)
+\- Rows / columns
 
-\- top K most common values for text columns
+\- Missing values per column
+
+\- Inferred column type (numeric / text / mixed)
+
+\- Numeric stats: min / max / mean / standard deviation
+
+\- Top K most common values for text columns
+
+\- Numeric outliers using:
+
+&nbsp; - Z-score threshold
+
+&nbsp; - IQR (interquartile range) bounds
+
+\- Text cleanup suggestions:
+
+&nbsp; - Detects “near duplicates” caused by casing/extra spaces (e.g., `Vancouver`, ` VANCOUVER `, `vancouver`)
+
+&nbsp; - Suggests recommended normalized values
+
+
+
+\## Group-by summaries (built-in)
+
+You can generate group summaries like “average score by city”:
+
+
+
+\- count / sum / mean / min / max per group
 
 
 
@@ -24,7 +50,7 @@ It reports:
 
 
 
-Analyze a CSV (print report to terminal):
+Basic analysis (prints report):
 
 py analyze\_csv.py path\\to\\file.csv
 
@@ -36,15 +62,27 @@ py analyze\_csv.py path\\to\\file.csv --top 10
 
 
 
-Analyze only the first 1000 rows (useful for big files):
+Analyze only the first 1000 rows:
 
 py analyze\_csv.py path\\to\\file.csv --sample-rows 1000
 
 
 
-Save the report to a text file:
+Save report to a file:
 
 py analyze\_csv.py path\\to\\file.csv --out report.txt
+
+
+
+Group-by summary (example: average score by city):
+
+py analyze\_csv.py path\\to\\file.csv --group-by city --value score
+
+
+
+Outlier sensitivity controls:
+
+py analyze\_csv.py path\\to\\file.csv --z 2.5 --iqr-k 1.0
 
 
 
@@ -53,4 +91,6 @@ py analyze\_csv.py path\\to\\file.csv --out report.txt
 \- Built on Windows 11
 
 \- Uses only Python standard library (no extra packages required)
+
+
 
