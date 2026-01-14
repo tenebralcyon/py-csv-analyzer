@@ -1,0 +1,46 @@
+CSV Report
+File: C:\Users\nzabu\OneDrive\桌面\py-csv-analyzer\examples\sample.csv
+Rows analyzed: 6
+Columns: 4
+
+Column: name
+  Type: text
+  Missing: 0/6 (0.0%)
+  Numeric values: 0
+  Text values: 6
+  Top 5 text values:
+    - Alice (2)
+    - Bob (1)
+    - Charlie (1)
+    - Dana (1)
+    - Evan (1)
+
+Column: age
+  Type: numeric
+  Missing: 1/6 (16.7%)
+  Numeric values: 5
+  Text values: 0
+  Min: 19.0
+  Max: 22.0
+  Mean: 20.4
+  Std dev: 1.140175425099138
+
+Column: city
+  Type: text
+  Missing: 1/6 (16.7%)
+  Numeric values: 0
+  Text values: 5
+  Top 5 text values:
+    - Vancouver (3)
+    - Toronto (1)
+    - Montreal (1)
+
+Column: score
+  Type: numeric
+  Missing: 1/6 (16.7%)
+  Numeric values: 5
+  Text values: 0
+  Min: 85.0
+  Max: 92.0
+  Mean: 89.0
+  Std dev: 2.715695122800054

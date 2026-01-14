@@ -1,0 +1,80 @@
+CSV Report
+File: C:\Users\nzabu\OneDrive\桌面\py-csv-analyzer\examples\messy_sample.csv
+Rows analyzed: 20
+Columns: 5
+
+Column: name
+  Type: text
+  Missing: 0/20 (0.0%)
+  Numeric values: 0
+  Text values: 20
+  Top 5 text values:
+    - Alice (1)
+    - Bob (1)
+    - Charlie (1)
+    - Dana (1)
+    - Evan (1)
+
+Column: age
+  Type: numeric
+  Missing: 1/20 (5.0%)
+  Numeric values: 19
+  Text values: 0
+  Min: 19.0
+  Max: 36.0
+  Mean: 27.210526315789473
+  Std dev: 5.339360629309895
+
+Column: city
+  Type: text
+  Missing: 3/20 (15.0%)
+  Numeric values: 0
+  Text values: 17
+  Top 5 text values:
+    - Vancouver (8)
+    - vancouver (1)
+    - VANCOUVER (1)
+    - Toronto (1)
+    - toronto (1)
+  Cleanup suggestions (possible merges):
+    -> recommended 'vancouver' from variants:
+       - Vancouver (8)
+       - vancouver (1)
+       - VANCOUVER (1)
+    -> recommended 'new york' from variants:
+       - New York (1)
+       - New  York (1)
+       - new york (1)
+    -> recommended 'toronto' from variants:
+       - Toronto (1)
+       - toronto (1)
+
+Column: score
+  Type: numeric
+  Missing: 0/20 (0.0%)
+  Numeric values: 20
+  Text values: 0
+  Min: 75.0
+  Max: 500.0
+  Mean: 104.575
+  Std dev: 93.21696183465868
+  Outliers (z-score >= 3.0): 1
+    - 500.0 (z=4.24)
+  Outliers (IQR k=1.5): 1
+    Bounds: low=66.438, high=101.938 (Q1=79.750, Q3=88.625)
+    - 500.0
+
+Column: spend
+  Type: numeric
+  Missing: 0/20 (0.0%)
+  Numeric values: 20
+  Text values: 0
+  Min: 88.0
+  Max: 9999.0
+  Mean: 598.6
+  Std dev: 2212.674980294452
+  Outliers (z-score >= 3.0): 1
+    - 9999.0 (z=4.25)
+  Outliers (IQR k=1.5): 1
+    Bounds: low=57.500, high=151.500 (Q1=92.750, Q3=116.250)
+    - 9999.0

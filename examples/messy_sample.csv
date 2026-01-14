@@ -1,0 +1,21 @@
+name,age,city,score,spend
+Alice,20,Vancouver,88.5,120
+Bob,19, Vancouver ,91,130
+Charlie,21,vancouver,85,125
+Dana,22,VANCOUVER,92,140
+Evan,22,Toronto,89,110
+Fiona,23,toronto ,90,115
+Gabe,24,Montreal,87,100
+Hana,25, montreal ,86,105
+Ivan,26,,88,102
+Jake,27,Vancouver,500,9999
+Kira,NA,Vancouver,84,98
+Liam,28,Vancouver,83,96
+Mia,29, Vancouver,82,95
+Noah,30,New York,81,94
+Owen,31,New  York ,80,93
+Pia,32,new york,79,92
+Quinn,33,NULL,78,91
+Rita,34,none,77,90
+Sam,35,  Vancouver  ,76,89
+Tina,36,Vancouver,75,88
