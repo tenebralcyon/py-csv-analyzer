@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini
+report.txt
